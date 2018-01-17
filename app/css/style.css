@@ -1,3 +1,18 @@
+.navbar-collapse.collapse{
+    display: block !important;
+  }
+  
+  .navbar-nav>li, .navbar-nav{
+    float: left !important;
+  }
+  
+  .navbar-nav.navbar-right:last-child{
+    margin-right: -15px !important;
+  }
+  
+  .navbar-right{
+    float: right !important;
+  }
 .navbar-default {
     background-color: white;
 }
@@ -80,9 +95,8 @@ header {
 }
 .title-btn {
     position: absolute;
-    right: 2px;
-    top: 2px;
-    
+    right: 5px;
+    top: 5px; 
 }
 .panel-footer a {
     font-size: 16px;
@@ -121,6 +135,9 @@ header {
 }
 .add-card-list-btn-wrapper {
     margin-bottom: 0;
+    height: 45px;
+    display: flex;
+    align-items: center;
 }
 .add-card-list {
     border: none;
@@ -247,8 +264,16 @@ label {
 .add-new-member-input {
     max-width: 250px
 }
-.add-new-member-btn {
+ .add-new-member-btn,
+ .edit-member-btn,
+ .delete-member-btn,
+ .cancel-edit-member-btn,
+ .save-member-btn
+ {
     font-size: 14px;
+    height: 100%;
+    margin-left: 2px;
+    border: 1px solid black;
 }
 .members-list-wrapper {
     border-color: #ddd;
@@ -269,4 +294,86 @@ label {
     border-bottom: none;
     padding-bottom: 9px;
     margin: 41px 0 0px; 
+}
+.add-member-form {
+    display: flex;
+}
+.list-title {
+    cursor: pointer;
+}
+.change-list-title {
+   display: none;
+    max-width: 190px;
+}
+.list-heading {
+    display: flex;
+    align-items: center;
+}
+
+.edit-list-title .change-list-title {
+    display: block;
+}
+.edit-list-title .list-title {
+    display: none;
+}
+.add-new-member-wrapper form {
+    width: 100%;
+}
+.member-btns-wrapper {
+    float: right
+}
+.edit-member-btn,
+.delete-member-btn,
+.cancel-edit-member-btn,
+.save-member-btn{
+    display: none;
+}
+
+.edit-member-btn {
+    background-color: #31708f;
+
+}
+.delete-member-btn{
+    background-color: #a94442;
+}
+.cancel-edit-member-btn {
+    background-color: white;
+    color: black;
+}
+.save-member-btn {
+    background-color: #3c763d;
+}
+.member-item:hover .edit-member-btn,
+.member-item:hover .delete-member-btn {
+    display: inline;
+}
+
+.show-edit-member-form .cancel-edit-member-btn,
+.show-edit-member-form .save-member-btn
+ {
+    display: inline;
+}
+.edit-member-input {
+    width: 100%;
+    float: left;
+    display: none;
+}
+.show-edit-member-form .edit-member-input {
+    display: block
+}
+.show-edit-member-form .member-name {
+    display: none;
+}
+.show-edit-member-form {
+    height: 60px;
+}
+.show-edit-member-form:hover .edit-member-btn,
+.show-edit-member-form:hover .delete-member-btn {
+    display: none;
+} 
+.member-item {
+    position: relative;
+}
+.edit-member-form {
+    position: absolute;
 }
